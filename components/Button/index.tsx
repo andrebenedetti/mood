@@ -12,7 +12,7 @@ function Button({
   className
 }: Props) {
   return (
-    <button className={clsx(`text-gray-900 py-3 mx-2 ${className}`)}>{label}</button>
+    <button className={clsx(`text-gray-900 py-3 mx-2 hover:opacity-75 hover:border hover:border-2 box-content border-gray-900  ${className}`)}>{label}</button>
   )
 }
 
