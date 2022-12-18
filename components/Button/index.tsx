@@ -1,15 +1,18 @@
 
+import clsx from 'clsx'
 import React from 'react'
 
 interface Props {
-    label: string
+  label: string
+  className?: string
 }
 
 function Button({
-    label
+  label,
+  className
 }: Props) {
   return (
-    <button className='font-bold underline px-2 border mx-2'>{label}</button>
+    <button className={clsx(`text-gray-900 py-3 mx-2 ${className}`)}>{label}</button>
   )
 }
 
