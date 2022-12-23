@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import Button from '../components/Button'
-import GradePanel from '../components/GradePanel'
+import Head from "next/head";
+import Button from "../components/Button";
+import GradePanel from "../components/GradePanel";
 
 export default function Home() {
   return (
@@ -11,10 +11,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main >
-        <h1 className='text-center py-4'>Hello, Andre =)<br /><strong>how was your day, today?</strong></h1>
-        <GradePanel />
+      <main>
+        <h1 className="text-center py-4">
+          Hello, Andre =)
+          <br />
+          <strong>how was your day, today?</strong>
+        </h1>
+        <div className="flex justify-items-center ml-auto mr-auto max-w-xl">
+          <GradePanel />
+        </div>
       </main>
     </>
-  )
+  );
 }
