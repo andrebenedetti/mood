@@ -1,8 +1,13 @@
 import Head from "next/head";
-import Button from "../components/Button";
 import GradePanel from "../components/GradePanel";
+import { trpc } from "../utils/trpc";
 
 export default function Home() {
+  const hello = trpc.hello.useQuery({ text: "client " });
+
+  if (!hello.data) {
+    return <div>Loading ...</div>;
+  }
   return (
     <>
       <Head>
@@ -17,6 +22,7 @@ export default function Home() {
           <br />
           <strong>how was your day, today?</strong>
         </h1>
+        <p>{hello.data.greeting}</p>
         <div className="flex justify-items-center ml-auto mr-auto max-w-xl">
           <GradePanel />
         </div>
