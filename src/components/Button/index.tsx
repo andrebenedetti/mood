@@ -8,7 +8,11 @@ interface Props {
 
 function Button({ label, className }: Props) {
   return (
-    <button className={clsx(`text-gray-900 hover:opacity-75  ${className}`)}>
+    <button
+      className={clsx(
+        `text-gray-900 hover:bg-gray-400 hover:text-black  ${className}`
+      )}
+    >
       {label}
     </button>
   );
