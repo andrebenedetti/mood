@@ -1,5 +1,6 @@
 import Head from "next/head";
 import GradePanel from "../components/GradePanel";
+import LoginForm from "../components/LoginForm";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-gray-200 h-screen">
+      <main className="bg-gray-200 h-screen px-4">
         <div className="h-1/6 flex flex-col justify-center">
           <h1 className="text-center py-4">
             Hello, Andre =)
@@ -19,7 +20,8 @@ export default function Home() {
           </h1>
         </div>
         <div className="flex justify-items-center ml-auto mr-auto max-w-sm h-4/6">
-          <GradePanel />
+          {/* <GradePanel /> */}
+          <LoginForm />
         </div>
       </main>
     </>
